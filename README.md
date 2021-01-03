@@ -44,3 +44,8 @@ Cluster Configuration Options
 6. Specify ``` NODE_IP_NW ``` as the network IP which can be used for assigning dynamic IPs for cluster nodes from the same network as Master
 7. Specify custom ``` POD_NW_CIDR ``` of your choice
 8. Setting up kubernetes dashboard is still a WIP with ``` K8S_DASHBOARD ``` option.
+
+
+```
+# install network calico 
+kubectl apply -f https://docs.projectcalico.org/v3.10/manifests/calico.yaml
