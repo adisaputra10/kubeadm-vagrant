@@ -10,7 +10,9 @@ cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
-apt-get install -y docker.io kubelet kubeadm kubectl kubernetes-cni
+apt-get install -y kubelet=1.15.4-00 kubeadm=1.15.4-00 kubectl=1.15.4-00 docker.io
+
+#apt-get install -y docker.io kubelet kubeadm kubectl kubernetes-cni
 systemctl enable kubelet && systemctl start kubelet
 
 cat > /etc/docker/daemon.json <<EOF
